@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import { useState } from 'react'
 import Banner  from '../components/Banner'
 import Sidebar from '../sideBar/Sidebar'
@@ -47,7 +47,7 @@ const Home = () => {
           <p>No Data Found !!</p>
           </>
         }
-          
+         
       </div>
 
       {/* // rightSide */}

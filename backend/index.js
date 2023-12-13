@@ -13,7 +13,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send(`<h1>Home Page</h1>`);
 });
-
+console.log("hh");
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

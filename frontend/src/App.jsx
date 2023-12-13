@@ -9,13 +9,10 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
     <nav>NavBar</nav>
       <Outlet/>
       
-=======
-      <h1 className='text-5xl font-bold text-indigo-700'>Hello world</h1>
->>>>>>> 50d8013806dcbed5732203e041772f49269f8f6b
+
     </>
   )
 }

@@ -3,7 +3,8 @@ const cors = require("cors");
 const app = express();
 require("dotenv").config;
 const dbConnect = require("./config/dbConnect.js");
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
+
 dbConnect();
 
 //middleware to parse the json data

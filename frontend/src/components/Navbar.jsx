@@ -1,6 +1,8 @@
 import { useState} from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import {FaBarsStaggered, FaXmark} from'react-icons/fa6';
+
+
 const Navbar = () => {
     const[isMenuOpen,setIsMenuOpen] = useState(false);
     const handleMenuToggler = ()=>{

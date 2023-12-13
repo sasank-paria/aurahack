@@ -4,9 +4,16 @@ import Banner  from '../components/Banner'
 import Sidebar from '../sideBar/Sidebar'
 
 const Home = () => {
+  // const [query, setQuery] = useState("");
+  //     const handleInputChange = (event) => {
+  //           setQuery(event.target.value)
+  //     }
+  //     console.log(query)
   const [isLoading , setLoading] = useState(true);
   const[currentPage , setCurrentPage] = useState(1);
   const itemsPerPage = 6;
+
+  
 
 
   const calculatePerRange = () =>{
@@ -34,6 +41,7 @@ const Home = () => {
       {/* main content */}
       <div className='bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'></div>
 
+     
       {/* left Side */}
       <div className='bg-white p-4 rounded'>
         <Sidebar handleChange={handleChange} handleClick={handleClick}/>
@@ -50,7 +58,7 @@ const Home = () => {
          
       </div>
 
-      {/* // rightSide */}
+      
       <div className='bg-white p-4 rounded'></div>
     </div>
   )

@@ -127,26 +127,12 @@ li {
   display: block;
 }
 
-.sidebar-label-container .checkmark:after {
-  top: 6.4px;
-  left: 6.4px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: white;
+.card {
+  padding: 2em;
 }
 
-.line {
-  margin-top: 3rem;
-  border-color: #f7f7f7;
-}
-
-
-
-/* create a job page */
-
-.create-job-flex{
-  @apply flex flex-col lg:flex-row items-center justify-between gap-8;
+.read-the-docs {
+  color: #888;
 }
 
 .create-job-input{

@@ -20,11 +20,19 @@ const JobPostingData = ({handleChange}) => {
           <input type="radio" name="test" id='test' value="" onChange={handleChange} />
           <span className='checkmark'></span>All Time
         </label>
-
-        <InputField handleChange={handleChange} value={twentyFourHoursAgoDate} title="last 24 Hours" name = "test"/>
-        <InputField handleChange={handleChange} value={SevenDaysAgoDate} title="last 7 Days" name = "test"/>
-        <InputField handleChange={handleChange} value={ThirtyDaysAgoDate} title="last month" name = "test"/>
-      </div>
+        <label className="sidebar-label-container">
+          <input type="radio" name="test" id='test' value="twentyFourHoursAgoDate" onChange={handleChange} />
+          <span className='checkmark'></span>Last 24 Hours
+        </label>
+        <label className="sidebar-label-container">
+          <input type="radio" name="test" id='test' value="SevenDaysAgoDate" onChange={handleChange} />
+          <span className='checkmark'></span>Last 7 Days
+        </label>
+        <label className="sidebar-label-container">
+          <input type="radio" name="test" id='test' value="ThirtyDaysAgoDate" onChange={handleChange} />
+          <span className='checkmark'></span>Last month
+        </label>
+       </div>
     </div>
   )
 }

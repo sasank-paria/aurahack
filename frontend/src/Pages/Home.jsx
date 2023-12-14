@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import Banner  from '../components/Banner'
 import Sidebar from '../sideBar/Sidebar'
 
@@ -12,18 +12,23 @@ const Home = () => {
 
   useEffect(()=>{
     setLoading(true);
-    fetch("jobs.json").then(res => res.json()).then(data =>{//console.log(data)})
-  setJobs(data)
-  setLoading(false)
+    fetch("https://localhost:3000/all-jobs")
+    .then((res)=> res.json())
+    .then((data) =>{
+  setJobs(data);
+  setLoading(false);
     })
-  },[])
+  },[]);
 
   const[query,setQuery]=useState(""); 
   const handleInputChange =(event)=>{
     setQuery(event.target.value)
   }
-  const filteredItems= jobs?.filter((job)=> job.jobTitle.toLowercase().indexof(query.toLowerCase()) !== -1);
+
+  const filteredItems= jobs.filter(
+    (job)=> job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1);
   //console.log(filteredItems);
+
  const handleChange = (event) =>{
   setSelectedCategory(event.target.value)
  }

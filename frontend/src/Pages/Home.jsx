@@ -1,13 +1,32 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import Banner  from '../components/Banner'
 import Sidebar from '../sideBar/Sidebar'
+import Card  from '../components/Card'
 
 const Home = () => {
   const [isLoading , setLoading] = useState(true);
   const[currentPage , setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
+
+
+  const[query,setQuery]=useState(""); 
+  const handleInputChange =(event)=>{
+    setQuery(event.target.value)
+  }
+  const filteredItems= jobs.filter((job)=> job.jobTitle.toLowercase().indexof(query.toLowerCase()) !== -1);
+  console.log(filteredItems);
+ const handleChange = (event) =>{
+  setSelectedCategory(event.target.value)
+ }
+
+
+ const handleClick = (event)=>{
+  setSelectedCategory(event.target.value)
+ }
+
+ 
 
   const calculatePerRange = () =>{
     const startIndex = (currentPage -1) * itemsPerPage;
@@ -37,6 +56,7 @@ const Home = () => {
   if(selected){
     filteredJobs=filteredJobs.filter(({jobLocation,maxprice,experienceLevel,salaryType,employmentType,postingDate})=>(
       jobLocation.toLowerCase() === selected.toLowerCase() ||
+      postingDate >= selected ||
       parseInt(maxprice) <= parseInt(selected) || 
       salaryType.toLowerCase() === selected.toLowerCase() ||
       employmentType.toLowerCase() === selected.toLowerCase()
@@ -51,7 +71,7 @@ const Home = () => {
  
   return (
     <div>
-      <Banner />
+      <Banner query={query} handleInputChange={handleInputChange} />
       {/* main content */}
       <div className='bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'></div>
 

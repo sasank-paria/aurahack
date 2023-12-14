@@ -1,9 +1,10 @@
 import React from 'react'
 import Button from './Button'
+import InputField from '../components/InputField'
 
 const Salary = ({handleChange , handleClick}) => {
   return (
-    <div>
+    <div className='w-80'>
       <h4 className='text-lg font-medium mb-2'>Salary</h4>
       <div className='mb-4'>
         <Button onClickHandler={handleClick} value="" title="Hourly"/>
@@ -11,7 +12,7 @@ const Salary = ({handleChange , handleClick}) => {
         <Button onClickHandler={handleClick} value="Yearly" title="Monthly"/>
         </div>
 
-        <div>
+        <div className='w-80'>
         <label className="sidebar-label-container">
         <input type="radio" name="test" id='test' value="" onChange={handleChange} />
         <span className='checkmark'></span>All

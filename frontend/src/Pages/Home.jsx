@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Banner  from '../components/Banner'
 import Sidebar from '../sideBar/Sidebar'
+import { Newsletter } from '../components/Newsletter'
 
 const Home = () => {
   const [isLoading , setLoading] = useState(true);
@@ -81,8 +82,8 @@ const Home = () => {
          }
       </div>
 
-      
-      <div className='bg-white p-4 rounded'></div>
+      {/* right side */}
+      <div className='bg-white p-4 rounded'><Newsletter/></div>
     </div>
   )
 }

@@ -1,16 +1,16 @@
 import React from 'react'
 import { FiSearch } from 'react-icons/fi';
 
-// import { FaRocket } from 'react-icons/fa6'
-import { FaEnvelopeOpenText } from 'react-icons/fe6'
 import { FaRocket } from "react-icons/fa6";
+import { SlEnvolopeLetter } from "react-icons/sl";
 
 export const Newsletter = () => {
   return (
     <div>
       <div>
       <h3 className='text-lg font-bold mb-2 items-center gap-2'>
-      <FaEnvelopeOpenText/>
+      {/* <FaEnvelopeOpenText/> */}
+      <SlEnvolopeLetter />
       Email me for jobs</h3>
       <p className='text-primary/75 text-base mb-4'>Put esse eiusmod aute. Sit enim dolre. Aute ea fugiat comondo as foes.</p>
 
@@ -23,7 +23,8 @@ export const Newsletter = () => {
       {/* 2nd part */}
       <div>
       <h3 className='text-lg font-bold mb-2 items-center gap-2'>
-      <FaRocket/>
+      {/* <FaRocket/> */}
+      <FaRocket />
       Email me for jobs</h3>
       <p className='text-primary/75 text-base mb-4'>Put esse eiusmod aute. Sit enim dolre. Aute ea fugiat comondo as foes.</p>
 

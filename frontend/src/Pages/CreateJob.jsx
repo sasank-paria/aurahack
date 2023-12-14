@@ -29,7 +29,7 @@ export const CreateJob = () => {
             }
             reset();
         });
-    }
+    };
 
     const options = [
         { value: "JavaScript", label: "JavaScript" },

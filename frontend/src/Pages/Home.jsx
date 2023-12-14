@@ -12,13 +12,14 @@ const Home = () => {
   const itemsPerPage = 6;
 
   const[jobs,setJobs]=useState([]);
-  useEffect(()=>{
+  
+   useEffect(()=>{
     setLoading(true);
-    fetch("jobs.json")
-    .then(res=> res.json())
-    .then(data =>{
+    fetch("https://localhost:3000/all-jobs")
+    .then((res)=> res.json())
+    .then((data) =>{
   setJobs(data);
-  // setLoading(false);
+  setLoading(false);
     })
   },[]);
 

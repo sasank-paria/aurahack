@@ -2,7 +2,6 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import CreatableSelect from 'react-select/creatable';
 import { useState } from 'react';
-import { useForm } from "react-hook-form";
 
 export const UpdateJob = () => {
     const {id} = useParams();

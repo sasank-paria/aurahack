@@ -167,29 +167,7 @@ export const CreateJob = () => {
                         </div>
                     </div>
 
-                    {/* 7th row */}
-
-                    <div className="w-full">
-                        <label className="block mb-2 text-lg">Job Description</label>
-                        <textarea className="w-full pl-3 py-1.5 focus: outline-none placeholder: text-gray-700"
-                            rows={6}
-                            defaultValue={""}
-                            placeholder="Job Description"
-                            {...register("description")} />
-                    </div>
-
-                    {/* last row */}
-
-                    <div className="w-full">
-                        <label className="block mb-2 text-1g">Job Posted By</label>
-                        <input
-                            type="email"
-                            placeholder="your email"
-                            {...register("postedBy")}
-                            className="create-job-input" />
-                    </div>
-
-                    <input type="submit" className="block mt-12 bg-blue-500 font-semibold px-8 py-2 rounded-sm cursor-pointer" />
+                    <input type="submit" className='my-5'/>
                 </form>
 
             </div >

@@ -75,7 +75,7 @@ export const CreateJob = () => {
                         </div>
                     </div>
 
-                    <input type="submit" className='my-5'/>
+                    <input type="submit" className='my-5 bg-blue-500'/>
                 </form>
 
             </div>

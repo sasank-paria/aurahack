@@ -11,11 +11,29 @@ const Location = ({handleChange}) => {
           <input type="radio" name="test" id='test' value="" onChange={handleChange} />
           <span className='checkmark'></span>All
         </label>
+        <label className="sidebar-label-container">
+          <input type="radio" name="test" id='test' value="delhi" onChange={handleChange} />
+          <span className='checkmark'></span>Delhi
+        </label>
+        <label className="sidebar-label-container">
+          <input type="radio" name="test" id='test' value="mumbai" onChange={handleChange} />
+          <span className='checkmark'></span>Mumbai
+        </label>
+        <label className="sidebar-label-container">
+          <input type="radio" name="test" id='test' value="madrid" onChange={handleChange} />
+          <span className='checkmark'></span>Hyderabad
+        </label>
+        <label className="sidebar-label-container">
+          <input type="radio" name="test" id='test' value="bosto" onChange={handleChange} />
+          <span className='checkmark'></span>Bengaluru
+        </label>
+{/*         
 
-        <InputField handleChange={handleChange} value="london" title="London" name = "test"/>
-        <InputField handleChange={handleChange} value="seattle" title="Seattle" name = "test"/>
-        <InputField handleChange={handleChange} value="madrid" title="Madrid" name = "test"/>
-        <InputField handleChange={handleChange} value="boston" title="Boston" name = "test"/>
+        <InputField handleChange={handleChange} value="london" title="Delhi" name = "test"/>
+        <InputField handleChange={handleChange} value="seattle" title="Mumbai" name = "test"/>
+        <InputField handleChange={handleChange} value="madrid" title="Hayderabad" name = "test"/>
+        <InputField handleChange={handleChange} value="bosto" title="Bengaluru" name = "test"/>
+      */}
       </div>
     </div>
   )

@@ -5,19 +5,11 @@ import Sidebar from '../sideBar/Sidebar'
 import Card  from '../components/Card'
 
 const Home = () => {
-  const[selectedCategory,setSelectedCategory]= useState(null);
-  const[jobs, setJobs]=useState();
   const [isLoading , setLoading] = useState(true);
   const[currentPage , setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
-  useEffect(()=>{
-    setLoading(true);
-    fetch("jobs.json").then(res => res.json()).then(data =>{//console.log(data)})
-  setJobs(data)
-  setLoading(false)
-    })
-  },[])
+
 
   const[query,setQuery]=useState(""); 
   const handleInputChange =(event)=>{
@@ -35,6 +27,7 @@ const Home = () => {
  }
 
  
+
   const calculatePerRange = () =>{
     const startIndex = (currentPage -1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -82,6 +75,7 @@ const Home = () => {
       {/* main content */}
       <div className='bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'></div>
 
+     
       {/* left Side */}
       <div className='bg-white p-4 rounded'>
         <Sidebar handleChange={handleChange} handleClick={handleClick}/>
@@ -107,7 +101,7 @@ const Home = () => {
          }
       </div>
 
-      {/* // rightSide */}
+      
       <div className='bg-white p-4 rounded'></div>
     </div>
   )

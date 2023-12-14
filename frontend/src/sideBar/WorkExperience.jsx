@@ -3,8 +3,8 @@ import InputField from '../components/InputField'
 
 const WorkExperience = ({handleChange}) => {
   return (
-     <div>
-      <h4 className='text-lg font-medium mb-2'>Work Experience</h4>
+     <div className='w-80'>
+      <h4 className='text-lg font-medium mb-2 w-80'>Work Experience</h4>
 
       <div>
         <label className="sidebar-label-container">

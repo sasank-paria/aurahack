@@ -2,11 +2,11 @@ import React from 'react'
 import { FiCalendar, FiClock, FiDollarSign, FiMapPin } from 'react-icons/fi';
 import {Link} from 'react-router-dom';
 const Card = ({data}) => {
-    const{companyName,companyLogo,minPrice,maxPrice,salaryType,jobLocation,emloymentType,postingDate}= data;
-    description=data;
+    const{companyName,jobTitle,companyLogo,minPrice,maxPrice,salaryType,jobLocation,emloymentType,postingDate,description}= data;
+    
 return(
    <section className='card'>
-    <link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start'>
+    <Link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start bg-blue-500'>
         <img src={companyLogo} alt =""/>
         <div >  
             <h4 className='text-primary mb-1'>{companyName}</h4>
@@ -19,7 +19,7 @@ return(
 </div>
 <p className='textbase text-primary/70'>{description} </p>
         </div>
-    </link>
+    </Link>
    </section>
   )
 }

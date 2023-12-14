@@ -1,5 +1,9 @@
 import React from 'react'
 import Salary from './Salary'
+import JobPostingData from './JobPostingData'
+import Location from './Location'
+import WorkExperience from './WorkExperience'
+import EmployementType from './EmployementType'
 
 const Sidebar = ({handleChange , handleClick}) => {
   return (
@@ -7,6 +11,9 @@ const Sidebar = ({handleChange , handleClick}) => {
       <h3 className='text-lg font-bold mb-2'>Filters</h3>
       <Location handleChange={handleChange}/>
       <Salary  handleChange={handleChange} handleClick={handleClick}/>
+      <JobPostingData handleChange={handleChange}/>
+      <WorkExperience handleChange={handleChange} />
+      <EmployementType handleChange={handleChange} />
     </div>
   )
 }

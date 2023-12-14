@@ -12,10 +12,10 @@ const JobPostingData = ({handleChange}) => {
     const SevenDaysAgoDate = SevenDaysAgo.toISOString().slice(0,10);
     const ThirtyDaysAgoDate = ThirtyDaysAgo.toISOString().slice(0,10);
   return (
-    <div>
-      <h4 className='text-lg font-medium mb-2'>Date of Posting</h4>
+    <div className='w-80'>
+      <h4 className='text-lg font-medium mb-2 w-80'>Date of Posting</h4>
 
-      <div>
+      <div className='w-80'>
         <label className="sidebar-label-container">
           <input type="radio" name="test" id='test' value="" onChange={handleChange} />
           <span className='checkmark'></span>All Time

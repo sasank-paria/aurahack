@@ -2,20 +2,46 @@ import React from 'react'
 import { useState , useEffect } from 'react'
 import Banner  from '../components/Banner'
 import Sidebar from '../sideBar/Sidebar'
+import Card from '../components/Card'
+import Newsletter from '../components/Newsletter'
+import Jobs from './Jobs'
 
 const Home = () => {
   const [isLoading , setLoading] = useState(true);
   const[currentPage , setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
+  const[jobs,setJobs]=useState([]);
+  useEffect(()=>{
+    setLoading(true);
+    fetch("jobs.json")
+    .then(res=> res.json())
+    .then(data =>{
+  setJobs(data);
+  // setLoading(false);
+    })
+  },[]);
+
+  
+  const [selectedCategory, setSelectedCategory] = useState("");
 
 
-  const[query,setQuery]=useState(""); 
-  const handleInputChange =(event)=>{
-    setQuery(event.target.value)
-  }
-  const filteredItems= jobs.filter((job)=> job.jobTitle.toLowercase().indexof(query.toLowerCase()) !== -1);
-  console.log(filteredItems);
+  const filteredJobs = jobs.filter(({jobLocation,maxprice,experienceLevel,salaryType,employmentType,postingDate})=>(
+    jobLocation.toLowerCase() === selectedCategory.toLowerCase() 
+    // other conditions...
+    ));
+   
+
+  
+   
+   
+   const[query,setQuery]=useState(""); 
+   const handleInputChange =(event)=>{
+     setQuery(event.target.value);
+    }
+    const filteredItems = jobs.filter((job) => job.jobTitle.toLowerCase().includes(query.toLowerCase()));
+  // const filteredItems= jobs.filter((job)=> job.jobTitle.toLowercase().indexof(query.toLowerCase()) !== -1);
+  // console.log(filteredItems);
  const handleChange = (event) =>{
   setSelectedCategory(event.target.value)
  }
@@ -72,7 +98,7 @@ const Home = () => {
     <div>
       <Banner query={query} handleInputChange={handleInputChange} />
       {/* main content */}
-      <div className='bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'></div>
+      <div className='bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'>
 
      
       {/* left Side */}
@@ -81,8 +107,9 @@ const Home = () => {
       </div>
 
       {/* job cards */}
-      <div className='col-span-2 bg-white p-4 rounded-sm'>
-        {
+      <div className='col-span-2 bg-white p-4 rounded-sm w-full'>
+      <Jobs result={result}/>
+        {/* {
           isLoading ? (<p className='font-medium'>Loading...</p>) : result.length > 0 ? (<Jobs result={result}/>) :<>
           <h3 className='text-lg font-bold mb-2'>{result.length} Jobs</h3>
           <p>No Data Found !!</p>
@@ -97,11 +124,12 @@ const Home = () => {
               <button onClick={nextPage} disabled={currentPage === Math.ceil(filteredItems.length > itemsPerPage)} className='hover:underline'>Next</button>
             </div>
           ) : ""
-         }
+         } */}
       </div>
 
       {/* right side */}
       <div className='bg-white p-4 rounded'><Newsletter/></div>
+    </div>
     </div>
   )
 }

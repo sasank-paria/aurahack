@@ -6,7 +6,7 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 
 export const Newsletter = () => {
   return (
-    <div>
+    <div className='w-96'>
       <div>
       <h3 className='text-lg font-bold mb-2 items-center gap-2'>
       {/* <FaEnvelopeOpenText/> */}

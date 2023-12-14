@@ -1,7 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import Banner  from '../components/Banner'
 import Sidebar from '../sideBar/Sidebar'
+import Card  from '../components/Card'
 
 const Home = () => {
   const[selectedCategory,setSelectedCategory]= useState(null);
@@ -22,8 +23,8 @@ const Home = () => {
   const handleInputChange =(event)=>{
     setQuery(event.target.value)
   }
-  const filteredItems= jobs?.filter((job)=> job.jobTitle.toLowercase().indexof(query.toLowerCase()) !== -1);
-  //console.log(filteredItems);
+  const filteredItems= jobs.filter((job)=> job.jobTitle.toLowercase().indexof(query.toLowerCase()) !== -1);
+  console.log(filteredItems);
  const handleChange = (event) =>{
   setSelectedCategory(event.target.value)
  }
@@ -62,6 +63,7 @@ const Home = () => {
   if(selected){
     filteredJobs=filteredJobs.filter(({jobLocation,maxprice,experienceLevel,salaryType,employmentType,postingDate})=>(
       jobLocation.toLowerCase() === selected.toLowerCase() ||
+      postingDate >= selected ||
       parseInt(maxprice) <= parseInt(selected) || 
       salaryType.toLowerCase() === selected.toLowerCase() ||
       employmentType.toLowerCase() === selected.toLowerCase()
@@ -76,7 +78,7 @@ const Home = () => {
  
   return (
     <div>
-      <Banner />
+      <Banner query={query} handleInputChange={handleInputChange} />
       {/* main content */}
       <div className='bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'></div>
 

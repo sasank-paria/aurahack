@@ -6,7 +6,7 @@ const Card = ({data}) => {
     
 return(
    <section className='card'>
-    <Link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start bg-blue-500'>
+    <Link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start '>
         <img src={companyLogo} alt =""/>
         <div >  
             <h4 className='text-primary mb-1'>{companyName}</h4>

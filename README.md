@@ -9,6 +9,7 @@ This project is a job portal built using the MERN stack (MongoDB, Express.js, Re
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Running Site](#running-site)
 
 ## Getting Started
 
@@ -44,3 +45,7 @@ If you want to contribute to Job Portal Technology, please fork the repository a
 ## License
 
 This project uses the following license: [GPL](https://choosealicense.com/licenses/gpl-3.0/).
+
+## Running Site
+
+https://soft-malasada-f80cd3.netlify.app/

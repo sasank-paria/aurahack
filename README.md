@@ -5,15 +5,20 @@ This project is a job portal built using the MERN stack (MongoDB, Express.js, Re
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+- [Running Site](#running-site)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Running Site](#running-site)
+
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+## Running Site
+
+https://soft-malasada-f80cd3.netlify.app/
 
 ### Prerequisites
 
@@ -29,14 +34,15 @@ To install Job Portal Technology, follow these steps:
 
 1. Clone the repository:
 2. Navigate to the project directory:
-3. Install the dependencies:
+3. Install the dependencies: `npm install`
 
 ## Usage
 
 To use Job Portal Technology, follow these steps:
 
 1. Start the server:
-2. Open your browser and navigate to `http://localhost:3000`
+2. Write a command `npm run dev`
+3. Open your browser and navigate to `http://localhost:5173`
 
 ## Contributing
 
@@ -46,6 +52,4 @@ If you want to contribute to Job Portal Technology, please fork the repository a
 
 This project uses the following license: [GPL](https://choosealicense.com/licenses/gpl-3.0/).
 
-## Running Site
 
-https://soft-malasada-f80cd3.netlify.app/
